@@ -1,0 +1,8 @@
+<h1>{{ride.name}}</h1>
+
+<label for="route_file" class="btn btn-default" ng-if="routeLoaded && !route">Upload Route</label>
+<input type="file" id="route_file" class="btn" ng-if="routeLoaded && !route" file-change="uploadFile">
+
+<div map="" route-points="route" track-points="track" ng-if="routeLoaded && route"></div>
+
+<a class="btn btn-default" ng-href="/rides/{{ride.id}}/edit">Edit</a>
