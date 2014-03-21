@@ -1,5 +1,10 @@
 'use strict';
 
 module.exports = {
-  env: 'production'
+  env: 'production',
+  database: {
+    name: 'tracker',
+    host: 'localhost',
+    port: 5432
+  }
 };
