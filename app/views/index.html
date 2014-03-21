@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>tracker.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <style>
+      @font-face {
+        font-family: 'Russo One';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Russo One'), local('RussoOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/russoone/v2/RO6e96EC9m6OLO0tr7J3z7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+      }
+    </style>
+
+    <!-- build:css({.tmp,app}) /styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="trackerApp">
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">tracker.</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" ng-view=""></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVpC8oh5XkrWO5yuyfKJzqqL7eVNSQlcY&sensor=false"></script>
+
+    <!-- build:js(app) /scripts/vendor.js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/lodash/dist/lodash.js"></script>
+    <script src="/bower_components/datejs/build/date.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js(app) /scripts/scripts.js -->
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/main.js"></script>
+    <script src="/scripts/controllers/ride.js"></script>
+    <script src="/scripts/controllers/ride_form.js"></script>
+    <script src="/scripts/services/ride_storage.js"></script>
+    <script src="/scripts/directives/file_change.js"></script>
+    <script src="/scripts/directives/map.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

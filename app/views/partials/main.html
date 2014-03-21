@@ -1,0 +1,13 @@
+<h1>Rides</h1>
+
+<h2 ng-if="rides.length == 0">
+  <small>No rides are currently being tracked.</small>
+</h2>
+
+<ul class="nav nav-pills nav-stacked">
+  <li ng-repeat="ride in rides">
+    <a ng-href="/rides/{{ride.id}}" ng-bind="ride.name"></a>
+  </li>
+</ul>
+
+<a href="/rides/new" class="btn btn-primary btn-lg">Track A New Ride</a>
